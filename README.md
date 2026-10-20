@@ -54,3 +54,14 @@ KITACO（キタコ）の燃調コントローラ **i-Map** には、PC でマッ
 - [REA (Reverse Engineer Anything)](https://github.com/morluto/rea) 6.7.0：.NET のメタデータ、呼び出し関係、文字列リテラルの抽出に使用
 - [ILSpy](https://github.com/icsharpcode/ILSpy)（ilspycmd 11.1.0）：C# へのデコンパイルに使用
 - 実機（i-Map 本体と PC インターフェイスケーブル）での動作確認や、通信の傍受はしていません
+
+## ライセンス
+
+| 対象 | ライセンス |
+|---|---|
+| 文書（`README.md`、`docs/`） | [CC BY 4.0](LICENSE) |
+| コード（`examples/`） | [MIT License](examples/LICENSE) |
+
+文書は、出典を示せば自由に利用、改変、再配布できます。たとえば「kuroron000234 / kitaco-imap-fuel-manager-analysis」とリポジトリへのリンクを示してください。
+
+これらのライセンスは、このリポジトリの作者が書いた文章とコードにだけ適用されます。KITACO の製品名、ソフトウェア、取扱説明書、マップデータの権利は株式会社キタコにあります。
