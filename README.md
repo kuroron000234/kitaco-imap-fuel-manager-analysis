@@ -25,6 +25,8 @@ KITACO（キタコ）の燃調コントローラ **i-Map** には、PC でマッ
 | マップの形 | 回転数 30 列（500〜15000 rpm、500 rpm 刻み）× スロットル開度 21 行（0〜100%、5% 刻み） |
 | 値の表し方 | 燃料噴射の補正率（−40〜+40%）に **100 を足した値（60〜140）** で記録する。`0` はレブリミットより上の領域 |
 | .fmp | 1 行が回転数の列 1 本分で、カンマ区切りの整数 21 個が並ぶ。これが 30 行あるテキスト |
+| マップの選択 | 本体の 4 ビット DIP スイッチで選ぶ。マップ番号 = 1 + (DIP1×8 + DIP2×4 + DIP3×2 + DIP4×1)。**MAP16（全部 ON）がユーザーオリジナルマップ** |
+| 純正ケーブル | USB → CP210x と思われる箱 → 8 芯ケーブル → 2 列 × 4 の 8 極防水カプラ。通信に使うのは TX、RX、GND のはずだが、8 極すべてに端子が入っている |
 
 ## ドキュメント
 
@@ -34,6 +36,9 @@ KITACO（キタコ）の燃調コントローラ **i-Map** には、PC でマッ
 4. [シリアル通信プロトコル](docs/04-serial-protocol.md)
 5. [既知の不具合と癖](docs/05-quirks-and-bugs.md)
 6. [互換ツールの実装ガイド](docs/06-implementation-guide.md)
+7. [PC インターフェイスケーブルと自作ケーブル](docs/07-pc-interface-cable.md)
+8. [開発の痕跡と関連ソフト](docs/08-development-traces.md)
+9. [ファームウェアについての考察](docs/09-firmware.md)
 
 [`examples/`](examples) には、Python の参照実装（`imap_ref.py`）、テスト用のなりすまし i-Map（`imap_emulator.py`）、それらを使った往復テスト（`test_roundtrip.py`）があります。**実機では試していません。**
 
@@ -54,6 +59,7 @@ KITACO（キタコ）の燃調コントローラ **i-Map** には、PC でマッ
 - [REA (Reverse Engineer Anything)](https://github.com/morluto/rea) 6.7.0：.NET のメタデータ、呼び出し関係、文字列リテラルの抽出に使用
 - [ILSpy](https://github.com/icsharpcode/ILSpy)（ilspycmd 11.1.0）：C# へのデコンパイルに使用
 - 実機（i-Map 本体と PC インターフェイスケーブル）での動作確認や、通信の傍受はしていません
+- ほかに参照した資料：i-Map 本体の取扱説明書（KITACO 公式サイトの PDF）、公開されていた純正ケーブルの中古品の出品写真、KITACO のデータロガー用ソフト（[1.4 節](docs/01-target-and-method.md#14-参照したその他の資料)）
 
 ## ライセンス
 

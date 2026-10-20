@@ -88,3 +88,12 @@ ilspycmd -p -o src imap/i-Map/Fuel_manager.exe
 - PC インターフェイスケーブルの分解やピン配置の調査
 
 このため、本体側の動作は PC ソフトの実装から推測するしかありません。各文書の【推測】【不明】は、この制約によるものです。
+
+## 1.4 参照したその他の資料
+
+| 資料 | 入手元 | 使い道 |
+|---|---|---|
+| i-Map カプラーオン SET 取扱説明書（グロム JC61 用、Ver3 763-1432120 / Ver4 763-1432130） | <https://www.kitaco.co.jp/storage/product/763-1432120~30.pdf> | DIP スイッチとマップ番号の対応、補正のかかり方、本体の配線（[3 章](03-map-data-and-fmp-format.md)、[4 章](04-serial-protocol.md)、[7 章](07-pc-interface-cable.md)） |
+| i-map カプラーオン SET 取扱説明書（ズーマー FI 用 763-1135100、PCX150 用 763-1441100） | <https://www.kitaco.co.jp/storage/product/763-1135100.pdf>、<https://www.kitaco.co.jp/storage/product/763-1441100.pdf> | 本体のカプラ（110 型 6P）と配線 |
+| 純正 PC インターフェイスケーブルの写真 | 2026 年 10 月にフリマアプリで公開されていた中古品の出品写真（6 枚） | ケーブルとカプラの構造（[7 章](07-pc-interface-cable.md)） |
+| データロガー用ソフト `Loger.EXE`（33,164,339 bytes、SHA-256 `4db60565e6ac184a84f901a190e848e2d12ce35a31092025ffd6d493766bec99`） | <https://www.kitaco.co.jp/imap> の「データロガー」 | 同じ会社の別製品用ソフトとの比較（[8 章](08-development-traces.md)） |
